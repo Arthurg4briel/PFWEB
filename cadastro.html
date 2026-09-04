@@ -7,6 +7,33 @@
 </head>
 <body>
     <h1>Cadastro de Usuários</h1>
-    
+    <form id="form-cadastro-usuario" action="index.html" method="get" onsubmit="alert('Cadastro realizado com sucesso.')">
+        <label for="cad-nome">Nome:</label>
+        <input type="text" id="cad-nome" name="nome" required><br><br>
+
+        <label>Sexo</label>
+        <input type="radio" id="cad-sexo-m" name="sexo" value="M" required>
+        <label for="cad-sexo-m">Masculino</label>
+        <input type="radio" id="cad-sexo-f" name="sexo" value="F">
+        <label for="cad-sexo-f">Feminino</label><br><br>
+
+        <label for="cad-obs">Observações:</label>
+        <textarea name="observacoes" id="cad-obs" rows="4" cols="40"></textarea><br><br>
+
+        <label for="cad-email">Email:</label>
+        <input type="email" id="cad-email" name="email" required><br><br>
+
+        <label for="cad-senha">Senha:</label>
+        <input type="password" id="cad-senha" name="senha"
+        pattern="(?=.*\d)(?=.*[a-zA-Z]).{6,}"
+        title="Sua senha deve conter letras, números e no mínimo 6 caracteres" required><br><br>
+
+        <label for="cad-confirma-senha">Confirmar senha:</label>
+        <input type="password" id="cad-confirma-senha" name="confirma_senha" required><br><br>
+
+        <button type="submit" id="btn-cadastrar-enviar">Cadastrar</button>
+        <button type="reset" id="btn-cadastrar-limpar">Limpar</button>
+
+    </form>
 </body>
 </html>
